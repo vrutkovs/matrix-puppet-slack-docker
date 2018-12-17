@@ -11,3 +11,5 @@ script:
   - if [[ "$TRAVIS_PULL_REQUEST" == "true" ]]; then exit 0; fi
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push $IMAGE:latest
+notifications:                                                                  
+  webhooks: https://hubot.vrutkovs.eu/travis-ci/103761953
